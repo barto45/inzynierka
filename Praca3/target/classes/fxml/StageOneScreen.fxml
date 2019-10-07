@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StageOneController">
+   <children>
+      <MenuBar cache="true" layoutY="2.0" mouseTransparent="true" prefHeight="30.0" prefWidth="600.0" scaleShape="false" AnchorPane.bottomAnchor="470.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Plik">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Zamknij" />
+                  <MenuItem mnemonicParsing="false" text="Zapisz jako" />
+                  <MenuItem mnemonicParsing="false" text="Zapisz" />
+                  <MenuItem mnemonicParsing="false" text="Otwórz" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Narzędzia">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Opcje">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Pomoc">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Informacje">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Informacje" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TabPane layoutY="55.0" prefHeight="436.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+        <tabs>
+          <Tab text="Osoby">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="368.0" prefWidth="552.0">
+                     <children>
+                        <TableView editable="true" layoutY="-2.0" prefHeight="409.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Nazwa" />
+                            <TableColumn prefWidth="114.0" text="Ulica" />
+                              <TableColumn prefWidth="36.0" text="Kod" />
+                              <TableColumn prefWidth="71.0" text="Gmina" />
+                              <TableColumn prefWidth="79.0" text="Nr.Telefonu" />
+                              <TableColumn prefWidth="77.0" text="Nip" />
+                              <TableColumn prefWidth="73.0" text="Pesel" />
+                              <TableColumn prefWidth="75.0" sortable="false" text="Regon" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Polisy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView editable="true" prefHeight="407.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Numer" />
+                              <TableColumn prefWidth="114.0" text="od" />
+                              <TableColumn prefWidth="36.0" text="Do" />
+                              <TableColumn prefWidth="75.0" text="T.U." />
+                              <TableColumn prefWidth="75.0" text="Nazwa Polisy" />
+                              <TableColumn prefWidth="77.0" text="Nr. Rejestracyjny" />
+                              <TableColumn prefWidth="73.0" text="Dane Ubezpieczonego" />
+                              <TableColumn prefWidth="75.0" sortable="false" text="Agent" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Sprawy">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView editable="true" layoutY="49.0" prefHeight="358.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Nr.Sprawy" />
+                              <TableColumn prefWidth="114.0" text="Dane Poszkodowanego" />
+                              <TableColumn prefWidth="36.0" text="Dane Sprawcy " />
+                              <TableColumn prefWidth="68.0" text="Data Rozpoczęcia sprawy" />
+                              <TableColumn prefWidth="82.0" text="Data zakończenia sprawy " />
+                              <TableColumn prefWidth="77.0" text="Status Sprawy " />
+                              <TableColumn prefWidth="90.0" text="Rodzaj Szkody" />
+                              <TableColumn prefWidth="59.0" text="Uwagi" />
+                           </columns>
+                        </TableView>
+                        <Button id="btndodajsprawy" fx:id="OnACdodajsprawy" mnemonicParsing="false" onAction="#OnACdodajsprawy" prefHeight="25.0" prefWidth="103.0" text="Dodaj Sprawę" />
+                        <Button layoutX="103.0" mnemonicParsing="false" text="Usuń Sprawę" />
+                        <Button layoutX="188.0" mnemonicParsing="false" text="Edytuj Sprawę" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Kalendarz">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker layoutX="156.0" layoutY="30.0" prefHeight="125.0" prefWidth="290.0" promptText="Wybierz datę" />
+                        <Button layoutX="276.0" layoutY="411.0" mnemonicParsing="false" text="Dodaj" />
+                        <TextField layoutX="156.0" layoutY="195.0" prefHeight="148.0" prefWidth="288.0" promptText="Przypomnienie" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button id="btndodaj" fx:id="OnACdodaj" layoutY="30.0" mnemonicParsing="false" onAction="#OnACdodaj" prefHeight="25.0" prefWidth="52.0" text="Dodaj" />
+      <Button id="btnusun" fx:id="OnACusun" layoutX="52.0" layoutY="30.0" mnemonicParsing="false" onAction="#OnACusun" prefHeight="25.0" prefWidth="52.0" text="Usuń" />
+      <Button id="btnedit" fx:id="OnACedit" layoutX="104.0" layoutY="30.0" mnemonicParsing="false" onAction="#OnACedit" prefHeight="25.0" prefWidth="52.0" text="Edytuj" />
+      <Button layoutX="156.0" layoutY="30.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>
