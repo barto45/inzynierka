@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+<?import Validate.*?>
+
+<AnchorPane prefHeight="218.0" prefWidth="370.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UsunKlientController">
+   <children>
+      <Label layoutX="63.0" layoutY="34.0" prefHeight="31.0" prefWidth="261.0" text="Czy na pewno chcesz usunąć Klienta " textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDelClient" layoutX="31.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#OnACDeleteClient" style="-fx-background-radius: 12; -fx-border-radius: 12;" text="Tak" textFill="GREEN">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancClient" cancelButton="true" layoutX="281.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#CancelCLient" prefHeight="14.0" prefWidth="43.0" style="-fx-border-radius: 12; -fx-background-radius: 12;" text="Nie" textFill="RED">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <NumerKlienta fx:id="ClientID" layoutX="111.0" layoutY="97.0" promptText="Numer Klienta" />
+      <Label layoutX="84.0" layoutY="65.0" prefHeight="17.0" prefWidth="220.0" text="o numerze wpisanym poniżej  ?" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="DelClient" layoutX="314.0" layoutY="101.0" prefHeight="17.0" textFill="WHITE" />
+   </children>
+   <opaqueInsets>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </opaqueInsets>
+</AnchorPane>

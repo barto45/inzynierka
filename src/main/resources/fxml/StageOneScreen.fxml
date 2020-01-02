@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.chart.*?>
 <?import javafx.embed.swing.*?>
 <?import javafx.scene.*?>
@@ -13,155 +14,243 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StageOneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StageOneController">
    <children>
-      <MenuBar cache="true" layoutY="2.0" mouseTransparent="true" prefHeight="30.0" prefWidth="600.0" scaleShape="false" AnchorPane.bottomAnchor="470.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <menus>
-            <Menu mnemonicParsing="false" text="Plik">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Zamknij" />
-                  <MenuItem mnemonicParsing="false" text="Zapisz jako" />
-                  <MenuItem mnemonicParsing="false" text="Zapisz" />
-                  <MenuItem mnemonicParsing="false" text="Otwórz" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Narzędzia">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Opcje">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Pomoc">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Informacje">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Informacje" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
-      <TabPane layoutY="34.0" prefHeight="466.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="34.0">
+    <AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: brown;">
+               <children>
+                 
+                 <AnchorPane style="-fx-background-color: brown;" />
+            <MenuBar prefHeight="27.0" prefWidth="200.0">
+              <menus>
+                <Menu text="Pliki">
+                  <items>
+                    <MenuItem onAction="#closeApp" text="Zamknij" />
+                  </items>
+                </Menu>
+                <Menu text="Edycja">
+                     <items>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#setModena" selected="true" text="Modena">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="styleGroup" />
+                           </toggleGroup></RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#setCaspian" text="Caspian" toggleGroup="$styleGroup" />
+                        </items>
+                </Menu>
+                <Menu text="Informacja">
+                  <items>
+                    <MenuItem onAction="#setAbout" text="Pomoc" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button id="btnedit" fx:id="OnACedit" layoutX="144.0" layoutY="27.0" mnemonicParsing="false" onAction="#OnACedit" prefHeight="30.0" prefWidth="83.0" text="Edytuj" textFill="ORANGE" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Modify_132685.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="btnusun" fx:id="OnACusun" layoutX="72.0" layoutY="26.0" mnemonicParsing="false" onAction="#OnACusun" prefHeight="31.0" prefWidth="72.0" text="Usuń" textFill="RED">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Delete_132746.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="btndodaj" fx:id="OnACdodaj" layoutY="26.0" mnemonicParsing="false" onAction="#OnACdodaj" prefHeight="31.0" prefWidth="72.0" text="Dodaj" textFill="GREEN">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Create_132699.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="refresh" layoutX="227.0" layoutY="27.0" mnemonicParsing="false" onAction="#ACRefresh" prefHeight="30.0" prefWidth="83.0" text="Odśwież" textFill="YELLOW">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Sync_132655.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+               </children>
+   </AnchorPane>
+      <TabPane layoutY="55.0" prefHeight="436.0" prefWidth="600.0" style="-fx-background-color: brown;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
         <tabs>
           <Tab text="Osoby">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="368.0" prefWidth="552.0">
                      <children>
-                        <TableView editable="true" layoutY="24.0" prefHeight="408.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+                        <TableView fx:id="Osoby" editable="true" layoutY="31.0" prefHeight="376.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="Nazwa" />
-                            <TableColumn prefWidth="114.0" text="Ulica" />
-                              <TableColumn prefWidth="36.0" text="Kod" />
-                              <TableColumn prefWidth="75.0" text="Gmina" />
-                              <TableColumn prefWidth="75.0" text="Nr.Telefonu" />
-                              <TableColumn prefWidth="77.0" text="Nip" />
-                              <TableColumn prefWidth="73.0" text="Pesel" />
-                              <TableColumn prefWidth="75.0" sortable="false" text="Regon" />
+                              <TableColumn fx:id="NrKlienta" prefWidth="75.0" text="Nr. Klient" />
+                            <TableColumn fx:id="NazwaKlienta" prefWidth="75.0" text="Imię Nazwisko" />
+                              <TableColumn fx:id="MiejscKlienta" prefWidth="75.0" sortable="false" text="Miejscowość" />
+                            <TableColumn fx:id="UlKlienta" prefWidth="114.0" text="Ulica" />
+                              <TableColumn fx:id="KodKlienta" prefWidth="36.0" text="Kod Pocztowy" />
+                              <TableColumn fx:id="TelKlienta" prefWidth="79.0" text="Nr.Telefonu" />
+                              <TableColumn fx:id="NipKlienta" prefWidth="77.0" text="Nip" />
+                              <TableColumn fx:id="PeselKlienta" prefWidth="73.0" text="Pesel" />
+                              <TableColumn fx:id="NrDomKlienta" prefWidth="75.0" text="Nr.Domu" />
                           </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                            </columnResizePolicy>
                         </TableView>
-                        <Button mnemonicParsing="false" text="Dodaj" />
-                        <Button layoutX="48.0" mnemonicParsing="false" text="Edytuj" />
-                        <Button layoutX="97.0" mnemonicParsing="false" text="Usuń" />
-                        <Button layoutX="140.0" mnemonicParsing="false" text="Pojazd" />
-                        <Button layoutX="192.0" mnemonicParsing="false" text="Majątek" />
-                        <Button layoutX="251.0" mnemonicParsing="false" text="Życie" />
-                        <Button layoutX="295.0" mnemonicParsing="false" text="Odśwież" />
+                        <Button fx:id="btnAddClient" mnemonicParsing="false" onAction="#AddClient" prefHeight="31.0" prefWidth="107.0" text="Dodaj Klienta" textFill="GREEN">
+                                       <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Create_132699.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+                        <Button fx:id="DeleteClient" layoutX="107.0" mnemonicParsing="false" onAction="#DeleteClient" prefHeight="31.0" prefWidth="102.0" text="Usuń Klienta">
+                        <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Delete_132746.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               </Button>
+                        <Button fx:id="EditClient" layoutX="208.0" mnemonicParsing="false" onAction="#EditClient" prefHeight="31.0" prefWidth="114.0" text="Edytuj Klienta">
+                        <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Modify_132685.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
                      </children>
                   </AnchorPane>
             </content>
+               <graphic>
+                  <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Person_132730.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
           </Tab>
           <Tab text="Polisy">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView editable="true" layoutY="24.0" prefHeight="408.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+                        <TableView fx:id="Polisy" editable="true" prefHeight="407.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                            </columnResizePolicy>
                            <columns>
-                              <TableColumn prefWidth="75.0" text="Numer" />
-                              <TableColumn prefWidth="114.0" text="od" />
-                              <TableColumn prefWidth="36.0" text="Do" />
-                              <TableColumn prefWidth="75.0" text="T.U." />
-                              <TableColumn prefWidth="75.0" text="Nazwa Polisy" />
-                              <TableColumn prefWidth="77.0" text="Nr. Rejestracyjny" />
-                              <TableColumn prefWidth="73.0" text="Dane Ubezpieczonego" />
-                              <TableColumn prefWidth="75.0" sortable="false" text="Agent" />
+                              <TableColumn fx:id="NrPolisy" prefWidth="75.0" text="Nr.Polisy" />
+                              <TableColumn fx:id="KlientPolisy" prefWidth="75.0" text="Nr.Klienta" />
+                              <TableColumn fx:id="NrRej" minWidth="0.0" prefWidth="73.0" text="Przedmiot Ubezpieczony" />
+                              <TableColumn fx:id="TowPolisy" prefWidth="75.0" text="T.U." />
+                              <TableColumn fx:id="NazwaPolisy" prefWidth="49.0" text="Rodzaj Polisy" />
+                              <TableColumn fx:id="OdPolisy" prefWidth="114.0" text="Od" />
+                              <TableColumn fx:id="DoPolisy" prefWidth="36.0" text="Do" />
+                              <TableColumn fx:id="DanePolisy" minWidth="0.0" prefWidth="33.0" text="Dodatki" />
+                              <TableColumn fx:id="RatyPolis" minWidth="0.0" prefWidth="57.0" text="Liczba Rat" />
+                              <TableColumn fx:id="KwotaPolisy" minWidth="0.0" prefWidth="48.0" text="Kwota" />
+                              <TableColumn fx:id="UwagiPolisy" prefWidth="75.0" sortable="false" text="Uwagi" />
                            </columns>
                         </TableView>
-                        <Button layoutX="92.0" mnemonicParsing="false" text="Drukuj" />
-                        <Button layoutX="43.0" mnemonicParsing="false" text="Edytuj" />
-                        <Button mnemonicParsing="false" text="Usuń" />
                      </children>
                   </AnchorPane>
             </content>
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Text_132763.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
           </Tab>
             <Tab text="Sprawy">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Dodaj" />
-                        <Button layoutX="48.0" mnemonicParsing="false" text="Edytuj" />
-                        <Button layoutX="97.0" mnemonicParsing="false" text="Usuń" />
-                        <Button layoutX="140.0" mnemonicParsing="false" text="Odśwież" />
-                        <TableView editable="true" layoutY="25.0" prefHeight="412.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                        <Button id="btndodajsprawy" fx:id="OnACdodajsprawy" mnemonicParsing="false" onAction="#OnACdodajsprawy" prefHeight="25.0" prefWidth="118.0" text="Dodaj Sprawę" textFill="GREEN">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../jgp/iconfinder_Create_132699.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="btnusunsprawy" fx:id="OnACusunsprawy" layoutX="118.0" mnemonicParsing="false" onAction="#OnACusunsprawy" prefHeight="25.0" prefWidth="134.0" text="Usuń Sprawę" textFill="RED">
+                           <graphic>
+                              <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../jgp/iconfinder_Delete_132746.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                         <Button id="btnedytujsprawy" layoutX="244.0" mnemonicParsing="false" onAction="#OnACedytujsprawy" text="Edytuj Sprawę" textFill="ORANGE">
+                           <graphic>
+                              <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../jgp/iconfinder_Modify_132685.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <TableView fx:id="Sprawy" editable="true" layoutY="25.0" prefHeight="382.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                            </columnResizePolicy>
                            <columns>
-                              <TableColumn prefWidth="75.0" text="Nr.Sprawy" />
-                              <TableColumn prefWidth="114.0" text="Dane Poszkodowanego" />
-                              <TableColumn prefWidth="36.0" text="Dane Sprawcy " />
-                              <TableColumn prefWidth="75.0" text="Data Rozpoczęcia sprawy" />
-                              <TableColumn prefWidth="75.0" text="Data zakończenia sprawy " />
-                              <TableColumn prefWidth="77.0" text="Status Sprawy " />
-                              <TableColumn prefWidth="73.0" text="Rodzaj Szkody" />
+                              <TableColumn fx:id="NrSprawy" prefWidth="75.0" text="Nr.Sprawy" />
+                              <TableColumn fx:id="DanePoszk" prefWidth="114.0" text="Dane Poszkodowanego" />
+                              <TableColumn fx:id="DaneSprawcy" prefWidth="36.0" text="Dane Sprawcy " />
+                              <TableColumn fx:id="RozpSprawy" prefWidth="68.0" text="Data Rozpoczęcia sprawy" />
+                              <TableColumn fx:id="ZakSprawy" prefWidth="82.0" text="Data zakończenia sprawy " />
+                              <TableColumn fx:id="StatSprawy" prefWidth="77.0" text="Status Sprawy " />
+                              <TableColumn fx:id="RodzajSprawy" prefWidth="90.0" text="Rodzaj Szkody" />
+                              <TableColumn fx:id="UwagiSprawy" prefWidth="59.0" text="Uwagi" />
                            </columns>
                         </TableView>
                      </children></AnchorPane>
                </content>
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Report_132648.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Tab>
-            <Tab text="Kalendarz">
+            <Tab text="Przypomnienia">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <DatePicker layoutX="156.0" layoutY="30.0"  prefHeight="125.0" prefWidth="290.0" promptText="Wybierz datę" />
-                        <Button layoutX="276.0" layoutY="411.0" mnemonicParsing="false" text="Dodaj" />
-                        <TextField layoutX="156.0" layoutY="195.0" prefHeight="148.0" prefWidth="288.0" promptText="Przypomnienie" />
+                        <TableView fx:id="Przypomnienie" editable="true" prefHeight="416.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="NrPolisyPrzyp" prefWidth="92.0" text="Numer Polisy" />
+                              <TableColumn fx:id="NrKlientaPrzyp" prefWidth="102.0" text="Numer Klienta" />
+                            <TableColumn fx:id="NazUbePrzyp" prefWidth="133.0" text="Przedmiot Ubezpieczony" />
+                              <TableColumn fx:id="DatZakPrzyp" minWidth="5.0" prefWidth="123.0" text="Data końca polisy" />
+                              <TableColumn fx:id="UwagiPrzyp" minWidth="0.0" prefWidth="149.0" text="Uwagi" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
                      </children></AnchorPane>
                </content>
-            </Tab>
-            <Tab text="Raporty">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-            <Tab text="Wykres">
-               <content>
-                  <AnchorPane blendMode="SRC_ATOP" cache="true" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <LineChart alternativeColumnFillVisible="true" focusTraversable="true" layoutY="32.0" mouseTransparent="true" prefHeight="432.0" prefWidth="600.0" title="Dane Wypadkowe" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                          <xAxis>
-                            <CategoryAxis cache="true" focusTraversable="true" label="Rok" mouseTransparent="true" prefHeight="22.0" prefWidth="543.0" />
-                          </xAxis>
-                          <yAxis>
-                            <NumberAxis side="LEFT" tickLabelFill="#f50505" />
-                          </yAxis>
-                        </LineChart>
-                     </children></AnchorPane>
-               </content>
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jgp/iconfinder_Calendar_132582.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Tab>
         </tabs>
       </TabPane>

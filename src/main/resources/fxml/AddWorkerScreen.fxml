@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+<?import Validate.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="570.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <content>
+      <AnchorPane prefHeight="511.0" prefWidth="568.0" style="-fx-background-color: brown;">
+         <children>
+            <HBox layoutX="151.0" layoutY="18.0" prefHeight="476.0" prefWidth="332.0" style="-fx-background-color: White;">
+               <children>
+                  <AnchorPane prefHeight="476.0" prefWidth="361.0">
+                     <children>
+                        <TextField fx:id="Logi" layoutX="103.0" layoutY="301.0" promptText="Login" />
+                        <TextField fx:id="Nazwisk" layoutX="103.0" layoutY="227.0" promptText="Nazwisko" style=": ;" />
+                        <TextField fx:id="Imie" layoutX="103.0" layoutY="151.0" promptText="Imię" />
+                        <Label fx:id="Cash" layoutX="20.0" layoutY="367.0" prefHeight="17.0" />
+                                    <Label fx:id="Login" layoutX="20.0" layoutY="305.0" prefHeight="17.0" />
+                                    <Label fx:id="Pass" layoutX="20.0" layoutY="231.0" prefHeight="17.0" />
+                                    <Label fx:id="Name" layoutX="20.0" layoutY="155.0" prefHeight="17.0" />
+                        <PasswordField fx:id="Haslo" layoutX="103.0" layoutY="363.0" promptText="Hasło" />
+                        <TextField fx:id="IdPrac" layoutX="103.0" layoutY="92.0" promptText="Numer Pracownika" />
+                        <Label fx:id="Id" layoutX="20.0" layoutY="96.0" />
+                     </children>
+                  </AnchorPane>
+               </children></HBox>
+            <Button fx:id="DodajPracow" layoutX="231.0" layoutY="442.0" mnemonicParsing="false" onMouseClicked="#DodajPracow" style="-fx-background-color: Brown;" text="Dodaj Użytkownika" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="155.0" layoutY="28.0" prefHeight="31.0" prefWidth="325.0" style="-fx-background-color: white;" text="Dodawanie Nowego Pracownika" textFill="BROWN">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.TextField?>
+<?import Validate.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="615.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DodajController">
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+           
+            <Label layoutX="318.0" layoutY="73.0" text="Rodzaj Polisy">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="136.0" prefHeight="21.0" prefWidth="106.0" text="Ubezpieczyciel">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="335.0" layoutY="188.0" text="Do dnia">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="335.0" layoutY="136.0" text="Od dnia">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label> 
+            <TextField fx:id="AddPrzedmiot" layoutX="135.0" layoutY="54.0" prefHeight="55.0" prefWidth="175.0" promptText="Nr.rej/marka,model/przedmiot" />
+            <ComboBox fx:id="AddUbezp" layoutX="148.0" layoutY="134.0" prefWidth="150.0" promptText="Ubezpieczyciel" />
+            <ComboBox fx:id="AddDodUbez" layoutX="148.0" layoutY="186.0" prefWidth="150.0" promptText="Dodatkowe Ubezpieczenia" />
+            <ComboBox fx:id="AddRaty" layoutX="148.0" layoutY="240.0" prefWidth="150.0" promptText="Raty" />
+            <KwotaTextField fx:id="AddKwota" layoutX="148.0" layoutY="284.0" promptText="Kwota" />
+            <ComboBox fx:id="AddRodzajUbez" layoutX="416.0" layoutY="71.0" prefWidth="150.0" promptText="Rodzaj Polisy" />
+            <DatePicker fx:id="AddOd" layoutX="416.0" layoutY="134.0" prefHeight="25.0" prefWidth="150.0" promptText="Data Początku Ubezpieczenia" />
+            <DatePicker fx:id="AddDo" layoutX="416.0" layoutY="186.0" prefHeight="25.0" prefWidth="150.0" promptText="Data Końca Ubezpieczenia" />
+            <NumerPracownika fx:id="AddNrPracownika" layoutX="417.0" layoutY="237.0" promptText="Numer Pracownika" />
+            <NumerKlienta fx:id="AddNrKlienta" layoutX="414.0" layoutY="282.0" prefHeight="25.0" prefWidth="154.0" promptText="Numer Klienta" />
+            <Uwagi fx:id="AddUwagi" alignment="CENTER" layoutX="136.0" layoutY="380.0" prefHeight="44.0" prefWidth="370.0" promptText="Uwagi" />
+             <Button id="btnaddperson" fx:id="InsertPolisa" layoutX="246.0" layoutY="434.0" mnemonicParsing="false" onAction="#insertPolisa" prefHeight="44.0" prefWidth="128.0" style="-fx-background-color: brown; -fx-background-radius: 15; -fx-border-radius: 15;" text="Dodaj Polise" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="3.0" layoutY="188.0" text="Dodatkowe ubezp">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="73.0" prefHeight="21.0" prefWidth="121.0" text="Przedmiot Ubezp">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+              <Label layoutX="77.0" layoutY="381.0" text="Uwagi">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            
+            <Label layoutX="11.0" layoutY="242.0" text="Raty">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="284.0" text="Kwota">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            
+           
+           
+            
+            <Label layoutX="316.0" layoutY="284.0" text="NumerKlienta">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="312.0" layoutY="239.0" text="Nr. Pracownika">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+           
+            <Label fx:id="LbPrzed" layoutX="135.0" layoutY="109.0" prefHeight="8.0" />
+            <Label fx:id="LbUwagi" layoutX="420.0" layoutY="426.0" prefHeight="17.0" />
+            <Label fx:id="LbPrac" layoutX="440.0" layoutY="263.0" prefHeight="17.0" />
+            <Label fx:id="LbKlient" layoutX="180.0" layoutY="355.0" prefHeight="17.0" />
+            <Label fx:id="LbKwota" layoutX="463.0" layoutY="317.0" prefHeight="17.0" />
+            <Label layoutX="235.0" layoutY="14.0" text="Dodawanie Polisy" textFill="BROWN">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

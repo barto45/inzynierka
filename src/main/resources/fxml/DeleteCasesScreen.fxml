@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import Validate.*?>
+
+<AnchorPane prefHeight="218.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UsunsprawyController">
+   <children>
+      <Label layoutX="63.0" layoutY="34.0" prefHeight="31.0" prefWidth="261.0" text="Czy na pewno chcesz usunąć sprawę ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDelete" layoutX="31.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#OnACusunSprawe" text="Tak" textFill="GREEN">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancel" cancelButton="true" layoutX="281.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#CancelCases" text="Nie" textFill="RED">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <NumerSprawy fx:id="CasesID" layoutX="111.0" layoutY="97.0" promptText="Numer Sprawy" />
+      <Label layoutX="84.0" layoutY="65.0" prefHeight="17.0" prefWidth="220.0" text="o numerze wpisanym poniżej  ?">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

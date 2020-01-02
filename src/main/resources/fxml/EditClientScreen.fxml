@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+<?import Validate.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="630.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EdytujKlientController">
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="419.0" prefWidth="583.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <Label layoutX="84.0" layoutY="77.0" text="Nr.Domu/Mieszk">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="65.0" layoutY="35.0" prefHeight="21.0" prefWidth="126.0" text="      Imię Nazwisko">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="EditNrKlienta" layoutX="208.0" layoutY="361.0" promptText="Numer Klienta" />
+            <Name fx:id="EditNazwa" layoutX="207.0" layoutY="33.0" promptText="Imie Nazwisko" />
+            <NumerDomu fx:id="EditNrDomu" layoutX="207.0" layoutY="75.0" promptText="Numer Domu" />
+            <Miejscowosc fx:id="EditMiejscowosc" layoutX="207.0" layoutY="111.0" promptText="Miejscowość" />
+            <KodPocztowy fx:id="EditKod" layoutX="207.0" layoutY="154.0" promptText="Kod pocztowy" />
+            <Ulica fx:id="EditUlica" layoutX="207.0" layoutY="196.0" promptText="Ulica" />
+            <NumerTel fx:id="EditNrTel" layoutX="207.0" layoutY="238.0" promptText="Nr.telefonu" />
+            <Pesel fx:id="EditPesel" layoutX="207.0" layoutY="276.0" promptText="Pesel" />
+             <Nip fx:id="EditNip" layoutX="207.0" layoutY="321.0" promptText="Nip" />     
+            <Uwagi fx:id="EditUwagi" alignment="CENTER" layoutX="97.0" layoutY="403.0" prefHeight="44.0" prefWidth="370.0" promptText="Uwagi" />
+            <Button fx:id="btnedytujsprawy" layoutX="235.0" layoutY="461.0" mnemonicParsing="false" onAction="#edytujsprawy" prefHeight="44.0" prefWidth="128.0" style="-fx-background-color: brown; -fx-background-radius: 15; -fx-border-radius: 15;" text="Edytuj Klienta" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="84.0" layoutY="112.0" prefHeight="23.0" prefWidth="112.0" text="Miejscowość">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="156.0" prefHeight="17.0" prefWidth="105.0" text="Kod Pocztowy">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="198.0" prefHeight="20.0" prefWidth="41.0" text="Ulica">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="240.0" prefHeight="21.0" prefWidth="97.0" text="Nr.telefonu">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="278.0" prefHeight="21.0" prefWidth="43.0" text="Pesel">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="415.0" text="Uwagi">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="323.0" text="Nip">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+           
+            <Label layoutX="57.0" layoutY="363.0" text="Numer Klienta">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+           
+            <Label fx:id="LbedNazw" layoutX="541.0" layoutY="37.0" prefHeight="17.0" />
+            <Label fx:id="LbedNrDomu" layoutX="541.0" layoutY="79.0" prefHeight="17.0" />
+            <Label fx:id="LbedMiejsc" layoutX="541.0" layoutY="114.0" prefHeight="17.0" />
+            <Label fx:id="LbedKod" layoutX="541.0" layoutY="158.0" prefHeight="17.0" />
+            <Label fx:id="LbedUlica" layoutX="543.0" layoutY="200.0" prefHeight="17.0" />
+            <Label fx:id="LbedNrTel" layoutX="548.0" layoutY="242.0" prefHeight="17.0" />
+            <Label fx:id="lbedPesel" layoutX="548.0" layoutY="279.0" prefHeight="17.0" />
+            <Label fx:id="LbedNip" layoutX="548.0" layoutY="325.0" prefHeight="17.0" />
+            <Label fx:id="LbedKlient" layoutX="548.0" layoutY="365.0" prefHeight="17.0" />
+            <Label fx:id="LbedUwagi" layoutX="534.0" layoutY="417.0" prefHeight="17.0" />
+            <Label layoutX="188.0" layoutY="1.0" text="Edycja Danych Klienta" textFill="BROWN">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

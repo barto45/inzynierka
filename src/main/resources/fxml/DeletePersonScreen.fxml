@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import Validate.*?>
+
+<AnchorPane prefHeight="218.0" prefWidth="370.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UsunController">
+   <children>
+      <Label layoutX="63.0" layoutY="34.0" prefHeight="31.0" prefWidth="261.0" text="Czy na pewno chcesz usunąć polise " textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDeleteP" layoutX="31.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#UsunPolise" style="-fx-background-radius: 12; -fx-border-radius: 12;" text="Tak" textFill="GREEN">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelP" cancelButton="true" layoutX="281.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#CancelPolisa" style="-fx-background-radius: 12; -fx-border-radius: 12;" text="Nie" textFill="RED">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <NumerPolisyTextField fx:id="IDpolisy" layoutX="111.0" layoutY="97.0" promptText="Numer Polisy" />
+      <Label layoutX="84.0" layoutY="65.0" prefHeight="17.0" prefWidth="220.0" text="o numerze wpisanym poniżej  ?" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="DelPerson" layoutX="289.0" layoutY="101.0" textFill="WHITE" />
+   </children>
+</AnchorPane>
